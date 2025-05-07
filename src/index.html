@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Student Onboard Hub</title>
+  </head>
+  <body>
+    <div class="min-h-screen backdrop-blur-sm">
+      <!-- header section -->
+      <header class="flex justify-center pt-16">
+        <div class="flex flex-col items-center">
+          <h1 class="text-4xl font-bold">Student Onboard Hub</h1>
+          <p class="pt-2 text-xs w-1/2 text-center">
+            Seamless student management at your fingertips — add, edit, and
+            organize with ease. One platform, endless simplicity!
+          </p>
+        </div>
+      </header>
+
+      <div class="form-table-container">
+        <!-- input form -->
+        <section>
+          <form id="form">
+            <div class="flex flex-col">
+              <label for="name">Student Name :</label>
+              <input type="text" name="std_name" id="name" required />
+            </div>
+            <div class="flex flex-col">
+              <label for="std_id">Student Id :</label>
+              <input type="number" name="std_id" id="std_id" required />
+            </div>
+            <div class="flex flex-col">
+              <label for="email">Email :</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="flex flex-col">
+              <label for="contact_no">Contact No. :</label>
+              <input type="number" name="contact_no" id="contact_no" required />
+            </div>
+            <button type="submit">Add</button>
+          </form>
+        </section>
+
+        <!-- student list table -->
+        <section
+          class="h-80 overflow-y-auto overflow-x-hidden w-full 2xl:w-5/5"
+        >
+          <div class="rounded-2xl border-2">
+            <table>
+              <thead>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th></th>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/src/input.js"></script>
+  </body>
+</html>
